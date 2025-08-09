@@ -2,6 +2,12 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
+app.get('/health', (req, res) => {
+  res.send('Server is running!');
+});
+
+
+
 const app = express();
 app.use(cors()); // CORS erlauben, damit Frontend mit Backend reden kann
 app.use(express.json()); // JSON Body parsen
